@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   expose :user, -> { User.find_by(id: params[:id]) }
-  expose :users, -> { User.all }
+  expose :users, -> { User.includes(:account).order(created_at: :desc) }
 
   def index
     if users

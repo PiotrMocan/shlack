@@ -9,7 +9,9 @@
 gender = %w[female male other]
 created_date = Date.today - 1.year
 20.times do
+  date = created_date + rand(1..365).days
+
   user = User.create(name: FFaker::Name.name, age: rand(15..99), gender: gender.sample,
-                     created_at: created_date + rand(1..365).days)
-  user.build_account(email: FFaker::Internet.email, password: '123456', role: 'regular').save
+                     created_at: date)
+  user.build_account(email: FFaker::Internet.email, password: '77938719Vanya', role: 'regular', created_at: date).save if user.persisted?
 end

@@ -44,6 +44,7 @@ group :development, :test do
   gem 'ffaker'
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -56,3 +57,5 @@ gem 'active_model_serializers', '~> 0.10.13'
 gem 'valid_email2', '~> 4.0'
 
 gem 'decent_exposure', '~> 3.0'
+
+gem "activestorage", "~> 7.0"
